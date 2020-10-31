@@ -26,7 +26,7 @@
 
     &-wrapper{
         display: flex; 
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background: url(../assets/image/img9.jpg);
         /*background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 2.5%, rgba(27, 30, 34, 0.4) 42.42%, #1B1E22 80.67%), url(../assets/image/img7.jpg);*/
@@ -37,7 +37,7 @@
 
     &-menu{
         display: flex;
-        width: 100%;
+        width: 100vw;
         background: #c8bfbf69;
         position: fixed;
         height: 70px;
@@ -85,7 +85,6 @@
         flex-direction: column-reverse;
         position: fixed;
         top: 70px;
-        left: 0;
         height: 70vh;
         width: 70px;
         background: #c8bfbf69;
@@ -103,60 +102,208 @@
             color: black;
         }
     }
+
+    .icon {
+        z-index: 1;
+        display: inline-block;
+        margin: 0 auto;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 30px;
+        text-rendering: auto;
+    
+    &-envelope:before {
+            content: "\f0e0";
+          }
+          
+    &-telegram:before {
+            content: "\f2c6";
+          }
+          
+    &-linkedin:before {
+            content: "\f0e1";
+          }
+          
+    &-github:before {
+            content: "\f09b";
+            font-size: 40px;
+          }
+      }
+    
+      .animation {
+        transition: all 0.3s ease 0s;
+    
+        &:hover {
+            z-index: 2;
+            transform: scale(1.2);
+            transition: all 0.3s ease 0s;
+            color: black;
+          }
+      }
 }
 
 
-.icon {
-    z-index: 1;
-    display: inline-block;
-    margin: 0 auto;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: 30px;
-    text-rendering: auto;
 
-&-envelope:before {
-        content: "\f0e0";
-      }
-      
-&-telegram:before {
-        content: "\f2c6";
-      }
-      
-&-linkedin:before {
-        content: "\f0e1";
-      }
-      
-&-github:before {
-        content: "\f09b";
-        font-size: 40px;
-      }
-  }
-
-  .animation {
-    transition: all 0.3s ease 0s;
-
-    &:hover {
-        z-index: 2;
-        transform: scale(1.2);
-        transition: all 0.3s ease 0s;
-        color: black;
-      }
-  }
   
+  main{
+      overflow-x: hidden;
+  }
   
   .hero{
     display: flex;
 
+    &-wrapper{
+        width: 100%;
+    }
+
+    &-content{
+        display: flex;
+        margin: 30px 20% 30px;
+        font-size: 16px;
+        border: 1px solid black;
+        justify-content: space-between;
+
+
+        &-name{
+            padding: 10px;
+        }
+
+        &-img{
+            width: 100%;
+        }
+    }
+
     .carousel{
         display: flex;
         width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /*transform: translate(-50%, -50%); */
+        transform: translateX(0%);
     }
+
     
     .item-container{
         display: flex;
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
     }
     
     .item{
         width: 100%;
+        background: blue;
+        display: none;
+        margin: 0 auto;
+        animation: 0.5s ease-in-out;
+
+/*ACTIVE BLOCK SLIDER*/
+
+        &-active{
+            display: block;
+        }
+
+/*NEXT BLOCK SLIDER*/
+
+        &-next{
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+    }
+
+/*ARROWS*/
+    .control{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        width: 15%;
+        cursor: pointer;
+
+        &-left{
+            left: 0;
+            right: auto;
+        }
+
+        &-right{
+            right: 0;
+            left: auto;
+        }
+
+        &-arrow{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 84px;
+
+            &__right{
+                right: 50%;
+            }
+        }
+
+    }
+
+//ANIMATION
+    .to-left{
+        animation-name: left;
+    }  
+    .to-right{
+        animation-name: right;
+        animation-direction: reverse;
+    }   
+    .from-left{
+        animation-name: left;
+        animation-direction: reverse;
+    }
+    .from-right{
+        animation-name: right;
+    }
+
+    @keyframes left {
+        from{
+            left:0;
+        }
+        to{
+            left:-100%
+        }
+    }
+
+    @keyframes right{
+        from{
+            left:100%;
+        }
+        to{
+            left:0;
+        }
     }
 } 
+
+
+@media(max-width:960px){
+    .hero{
+
+        &-content{
+            display: flex;
+           flex-direction: column; 
+           justify-content: center;
+           align-items: center;
+        }
+    }
+}
+
+@media(max-width:600px){
+    .hero{
+        &-content{
+            border: none;
+        }
+
+        .control-arrow{
+            display: none;
+        }
+
+
+    }
+    
+}
