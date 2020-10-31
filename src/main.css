@@ -6,13 +6,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.header {
-  width: 100vw;
-  max-width: 100%;
-  /*position: fixed;*/
-  top: 6rem;
-  position: absolute;
-  display: none;
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("./fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .wrapper {
@@ -29,20 +27,151 @@
           justify-content: space-between;
 }
 
-.carousel {
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: blanchedalmond;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: blue;
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: burlywood;
+}
+
+.header-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  margin-left: 30%;
+}
+
+.header-list li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.header-list .list__link {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-logo__burger {
+  display: none;
+}
+
+.header-logo__img {
+  width: 100px;
+  height: 100px;
+}
+
+.header .list-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70vh;
+  width: 70px;
+  background: chartreuse;
+}
+
+.header .list-icon li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.header .list-icon__links {
+  text-decoration: none;
+}
+
+.icon {
+  z-index: 1;
+  display: inline-block;
+  margin: 0 20px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 2em;
+  text-rendering: auto;
+}
+
+.icon-envelope:before {
+  content: "\f0e0";
+}
+
+.icon-telegram:before {
+  content: "\f2c6";
+}
+
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+.icon-github:before {
+  content: "\f09b";
+}
+
+.animation {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.animation:hover {
+  z-index: 2;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: black;
+}
+
+.hero {
+  display: none;
+}
+
+.hero .carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
 
-.item-container {
+.hero .item-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.item {
+.hero .item {
   width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

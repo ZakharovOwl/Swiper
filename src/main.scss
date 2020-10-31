@@ -5,14 +5,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.header{
-    width: 100vw;
-    max-width: 100%;
-    /*position: fixed;*/
-    top: 6rem;
-    position: absolute;
-    display: none;
-}
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('./fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 .wrapper{
     display: flex;
@@ -22,15 +20,122 @@
     justify-content: space-between;
 }
 
-.carousel{
+.header{
     display: flex;
-    width: 100%;
+    background: blanchedalmond;
+
+    &-wrapper{
+        display: flex; 
+        width: 100%;
+        background-color: blue;
+    }
+
+    &-menu{
+        display: flex;
+        width: 100%;
+        background-color: burlywood;
+    }
+    &-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        margin-left: 30%;
+
+        & li{
+            text-decoration: none;
+            list-style: none;
+        }
+        .list__link{
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+    }
+
+    &-logo{
+        display: flex;
+
+        &__burger{
+            display: none;
+        }
+        &__img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .list-icon{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 70vh;
+        width: 70px;
+        background: chartreuse;
+
+        & li{
+            text-decoration: none;
+            list-style: none;
+        }
+        &__links{
+            text-decoration: none;
+        }
+    }
 }
 
-.item-container{
-    display: flex;
-}
 
-.item{
-    width: 100%;
-}
+.icon {
+    z-index: 1;
+    display: inline-block;
+    margin: 0 20px;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 2em;
+    text-rendering: auto;
+
+&-envelope:before {
+        content: "\f0e0";
+      }
+      
+&-telegram:before {
+        content: "\f2c6";
+      }
+      
+&-linkedin:before {
+        content: "\f0e1";
+      }
+      
+&-github:before {
+        content: "\f09b";
+      }
+  }
+
+  .animation {
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        z-index: 2;
+        transform: scale(1.2);
+        transition: all 0.3s ease 0s;
+        color: black;
+      }
+  }
+  
+  
+  .hero{
+    display: none;
+
+    .carousel{
+        display: flex;
+        width: 100%;
+    }
+    
+    .item-container{
+        display: flex;
+    }
+    
+    .item{
+        width: 100%;
+    }
+} 
