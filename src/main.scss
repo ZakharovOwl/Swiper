@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header{
+    width: 100vw;
+    max-width: 100%;
+    /*position: fixed;*/
+    top: 6rem;
+    position: absolute;
+    display: none;
+}
+
+.wrapper{
+    display: flex;
+    margin: 0 auto;
+    max-width: 120rem; 
+    flex: 1;
+    justify-content: space-between;
+}
+
+.carousel{
+    display: flex;
+    width: 100%;
+}
+
+.item-container{
+    display: flex;
+}
+
+.item{
+    width: 100%;
+}
