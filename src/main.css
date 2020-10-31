@@ -31,15 +31,20 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: blanchedalmond;
+  background: white;
 }
 
 .header-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  background-color: blue;
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/image/img9.jpg);
+  /*background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 2.5%, rgba(27, 30, 34, 0.4) 42.42%, #1B1E22 80.67%), url(../assets/image/img7.jpg);*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .header-menu {
@@ -47,7 +52,16 @@
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  background-color: burlywood;
+  background: #c8bfbf69;
+  position: fixed;
+  height: 70px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
 .header-list {
@@ -60,8 +74,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-right: 5vw;
   width: 50%;
-  margin-left: 30%;
+  min-width: 420px;
 }
 
 .header-list li {
@@ -73,12 +88,20 @@
   text-decoration: none;
   list-style: none;
   color: black;
+  font-size: 14px;
 }
 
 .header-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5vw;
 }
 
 .header-logo__burger {
@@ -86,8 +109,8 @@
 }
 
 .header-logo__img {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 .header .list-icon {
@@ -95,32 +118,37 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
   height: 70vh;
   width: 70px;
-  background: chartreuse;
+  background: #c8bfbf69;
+  padding-bottom: 30px;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
 .header .list-icon li {
   text-decoration: none;
   list-style: none;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .header .list-icon__links {
   text-decoration: none;
+  color: black;
 }
 
 .icon {
   z-index: 1;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 auto;
   font: normal normal normal 14px/1 FontAwesome;
-  font-size: 2em;
+  font-size: 30px;
   text-rendering: auto;
 }
 
@@ -138,6 +166,7 @@
 
 .icon-github:before {
   content: "\f09b";
+  font-size: 40px;
 }
 
 .animation {
@@ -155,7 +184,9 @@
 }
 
 .hero {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .hero .carousel {

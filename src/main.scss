@@ -22,25 +22,36 @@
 
 .header{
     display: flex;
-    background: blanchedalmond;
+    background: white;
 
     &-wrapper{
         display: flex; 
-        width: 100%;
-        background-color: blue;
+        width: 100vw;
+        height: 100vh;
+        background: url(../assets/image/img9.jpg);
+        /*background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 2.5%, rgba(27, 30, 34, 0.4) 42.42%, #1B1E22 80.67%), url(../assets/image/img7.jpg);*/
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     &-menu{
         display: flex;
         width: 100%;
-        background-color: burlywood;
+        background: #c8bfbf69;
+        position: fixed;
+        height: 70px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
     }
     &-list{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-right: 5vw;
         width: 50%;
-        margin-left: 30%;
+        min-width: 420px;
 
         & li{
             text-decoration: none;
@@ -50,37 +61,46 @@
             text-decoration: none;
             list-style: none;
             color: black;
+            font-size: 14px;
         }
     }
 
     &-logo{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5vw;
 
         &__burger{
             display: none;
         }
         &__img{
-            width: 100px;
-            height: 100px;
+            width: 60px;
+            height: 60px;
         }
     }
 
     .list-icon{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         position: fixed;
-        top: 0;
+        top: 70px;
         left: 0;
         height: 70vh;
         width: 70px;
-        background: chartreuse;
+        background: #c8bfbf69;
+        padding-bottom: 30px;
+        border-right: 0.5px solid rgba(0, 0, 0, 0.5);
 
         & li{
             text-decoration: none;
             list-style: none;
+            margin: 0 auto;
+            margin-bottom: 30px;
         }
         &__links{
             text-decoration: none;
+            color: black;
         }
     }
 }
@@ -89,9 +109,9 @@
 .icon {
     z-index: 1;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 auto;
     font: normal normal normal 14px/1 FontAwesome;
-    font-size: 2em;
+    font-size: 30px;
     text-rendering: auto;
 
 &-envelope:before {
@@ -108,6 +128,7 @@
       
 &-github:before {
         content: "\f09b";
+        font-size: 40px;
       }
   }
 
@@ -124,7 +145,7 @@
   
   
   .hero{
-    display: none;
+    display: flex;
 
     .carousel{
         display: flex;
