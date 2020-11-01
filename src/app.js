@@ -9,6 +9,10 @@ function changeCurrentItem(n){
 
 }
 
+/*
+                SLIDER
+*/
+
 function hideItem(direction){
     /*отключаю стрелку на время действия анимации*/
     isEnabled = false;
@@ -40,15 +44,43 @@ function nextItem(n){
 }
 
 controlLeft.addEventListener('click', function(){
-    console.log('hi');
+    //console.log('hi');
     if (isEnabled){
         previousItem(currentItem)
     }
 })
 
 controlRight.addEventListener('click', function(){
-    console.log('hi');
+    //console.log('hi');
     if (isEnabled){
         nextItem(currentItem)
     }
 })
+
+/*
+                SWIPER
+*/
+let el = document.querySelector('.carousel')
+
+
+const swipeDetect = (el)=>{
+
+    let surface = el;
+    let startX = 0; // Х
+    let startY = 0; // Y
+    let distX = 0; // distance X
+    let distY = 0; // distance Y, block
+
+    let startTime = 0; // start time to swipe
+    let elapsedTime = 0; // finish time to swipe
+
+    let threshold = 150; //minimal distance swiper
+    let restraint = 100;  // угол for swipe
+    let allowedTime = 100; // time to swipe
+
+}
+
+
+
+
+swipeDetect(el)
