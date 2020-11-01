@@ -104,7 +104,7 @@
     }
 
     .icon {
-        z-index: 1;
+        z-index: 1000;
         display: inline-block;
         margin: 0 auto;
         font: normal normal normal 14px/1 FontAwesome;
@@ -145,11 +145,13 @@
 
   
   main{
-      overflow-x: hidden;
+      /*overflow-x: hidden;*/
+      background: yellow;
   }
   
   .hero{
     display: flex;
+    opacity: 0.99;
 
     &-wrapper{
         width: 100%;
@@ -164,11 +166,14 @@
 
 
         &-name{
+            display: flex;
             padding: 10px;
+            width: 30%;
         }
 
         &-img{
-            width: 100%;
+            display: flex;
+            width: 70%;
         }
     }
 
@@ -179,7 +184,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        /*transform: translate(-50%, -50%); */
+        /*transform: translate(-50%, -50%);*/
         transform: translateX(0%);
     }
 
@@ -187,13 +192,12 @@
     .item-container{
         display: flex;
         width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
+        //position: relative;
         position: relative;
     }
     
     .item{
-        width: 100%;
-        background: blue;
         display: none;
         margin: 0 auto;
         animation: 0.5s ease-in-out;
@@ -263,19 +267,19 @@
 
     @keyframes left {
         from{
-            left:0;
+            transform: translateX(0%);
         }
         to{
-            left:-100%
+            transform: translateX(-100%);
         }
     }
 
     @keyframes right{
         from{
-            left:100%;
+            transform: translateX(100%);
         }
         to{
-            left:0;
+            transform: translateX(0);
         }
     }
 } 
