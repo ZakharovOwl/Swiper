@@ -1,3 +1,5 @@
+import './../main.css'
+
 let items = document.querySelectorAll('.item');
 let controlLeft = document.querySelector('.control-left');
 let controlRight = document.querySelector('.control-right');
