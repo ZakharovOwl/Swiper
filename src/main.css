@@ -370,6 +370,28 @@ main {
 }
 
 @media (max-width: 960px) {
+  .header-list {
+    display: none;
+  }
+  .header .list-icon {
+    display: none;
+  }
+  .header .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .burger-line {
+    background-color: black;
+    height: 2px;
+    margin-top: 5px;
+    width: 23px;
+    margin-right: 9vw;
+  }
   .hero-content {
     display: -webkit-box;
     display: -ms-flexbox;

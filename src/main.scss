@@ -286,6 +286,27 @@
 
 
 @media(max-width:960px){
+    .header{
+        &-list{
+            display: none;
+        }
+        .list-icon{
+            display: none;
+        }
+        .burger{
+            display: flex;
+            flex-direction: column;
+
+            &-line{
+                background-color: black;
+                height: 2px;
+                margin-top: 5px;
+                width: 23px;
+                margin-right: 9vw;
+            }
+        }
+    }
+    
     .hero{
 
         &-content{
