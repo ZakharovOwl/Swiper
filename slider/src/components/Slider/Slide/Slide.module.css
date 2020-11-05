@@ -1,0 +1,16 @@
+.slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.slide_img{
+    display: flex;
+    height: 70vh;
+}
+.slide_text{
+    display: flex;
+    background-color: aliceblue;
+    justify-content: center;
+}

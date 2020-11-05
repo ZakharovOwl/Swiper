@@ -1,3 +1,5 @@
 # Swiper
 
-demo:  https://zakharovowl.github.io/Swiper/
+use:   
+cd slider;   
+npm start    
