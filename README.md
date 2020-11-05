@@ -1,5 +1,6 @@
 # Swiper
 
-use:   
-cd slider;   
-npm start    
+USE:
+
+### `cd slider`     
+### `npm start`
